@@ -1,8 +1,9 @@
 const exercises = [
   {
-    title: "DECHOVÁ CVIČENÍ",
-    description: "Základní techniky vědomého dýchání pro zklidnění mysli a těla.",
-    duration: "5-10 minut",
+    title: "CVIČENÍ JEDNA",
+    description: "Jaký pocit předchází hněvu? Rozpoznávání primárních pocitů.",
+    duration: "15-20 minut",
+    link: "/cviceni/jedna",
   },
   {
     title: "BODY SCAN",
@@ -36,31 +37,35 @@ const Exercises = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {exercises.map((exercise, index) => (
-            <div
-              key={index}
-              className="group p-8 bg-background border border-border hover:border-foreground transition-all duration-300 cursor-pointer"
-            >
-              <div className="space-y-4">
-                <div className="flex items-start justify-between">
-                  <h3 className="font-bebas text-2xl sm:text-3xl leading-tight group-hover:translate-x-2 transition-transform duration-300">
-                    {exercise.title}
-                  </h3>
-                  <span className="text-xs font-inter font-light opacity-60 whitespace-nowrap ml-4">
-                    {exercise.duration}
-                  </span>
+          {exercises.map((exercise, index) => {
+            const Component = exercise.link ? 'a' : 'div';
+            return (
+              <Component
+                key={index}
+                href={exercise.link}
+                className="group p-8 bg-background border border-border hover:border-foreground transition-all duration-300 cursor-pointer block"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-start justify-between">
+                    <h3 className="font-bebas text-2xl sm:text-3xl leading-tight group-hover:translate-x-2 transition-transform duration-300">
+                      {exercise.title}
+                    </h3>
+                    <span className="text-xs font-inter font-light opacity-60 whitespace-nowrap ml-4">
+                      {exercise.duration}
+                    </span>
+                  </div>
+                  <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
+                    {exercise.description}
+                  </p>
+                  <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span className="text-sm font-inter font-light border-b border-foreground pb-1">
+                      VÍCE INFO →
+                    </span>
+                  </div>
                 </div>
-                <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
-                  {exercise.description}
-                </p>
-                <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-sm font-inter font-light border-b border-foreground pb-1">
-                    VÍCE INFO →
-                  </span>
-                </div>
-              </div>
-            </div>
-          ))}
+              </Component>
+            );
+          })}
         </div>
       </div>
     </section>
