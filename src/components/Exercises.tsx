@@ -1,8 +1,11 @@
+import audioFile from "@/assets/cviceni-jedna.mp3";
+
 const exercises = [
   {
-    title: "DECHOVÁ CVIČENÍ",
+    title: "CVIČENÍ JEDNA",
     description: "Základní techniky vědomého dýchání pro zklidnění mysli a těla.",
     duration: "5-10 minut",
+    audio: audioFile,
   },
   {
     title: "BODY SCAN",
@@ -22,6 +25,13 @@ const exercises = [
 ];
 
 const Exercises = () => {
+  const handleExerciseClick = (audio?: string) => {
+    if (audio) {
+      const audioElement = new Audio(audio);
+      audioElement.play();
+    }
+  };
+
   return (
     <section id="exercises" className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="container mx-auto max-w-6xl">
@@ -39,6 +49,7 @@ const Exercises = () => {
           {exercises.map((exercise, index) => (
             <div
               key={index}
+              onClick={() => handleExerciseClick(exercise.audio)}
               className="group p-8 bg-background border border-border hover:border-foreground transition-all duration-300 cursor-pointer"
             >
               <div className="space-y-4">
@@ -55,7 +66,7 @@ const Exercises = () => {
                 </p>
                 <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-sm font-inter font-light border-b border-foreground pb-1">
-                    VÍCE INFO →
+                    {exercise.audio ? "POSLECHNOUT →" : "VÍCE INFO →"}
                   </span>
                 </div>
               </div>
