@@ -1,22 +1,22 @@
 const exercises = [
   {
-    title: "CVIČENÍ JEDNA",
+    title: "CVIČENÍ 1",
     description: "Jaký pocit předchází hněvu? Rozpoznávání primárních pocitů.",
     duration: "15-20 minut",
     link: "/cviceni/jedna",
   },
   {
-    title: "BODY SCAN",
+    title: "CVIČENÍ 2",
     description: "Postupné vnímání jednotlivých částí těla a uvolňování napětí.",
     duration: "15-20 minut",
   },
   {
-    title: "MINDFUL WALKING",
+    title: "CVIČENÍ 3",
     description: "Vědomá chůze jako forma aktivní meditace.",
     duration: "10-15 minut",
   },
   {
-    title: "MEDITACE LASKAVOSTI",
+    title: "CVIČENÍ 4",
     description: "Kultivace soucitu a laskavosti k sobě i druhým.",
     duration: "10-15 minut",
   },
