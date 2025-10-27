@@ -92,12 +92,12 @@ const AudioPlayer = ({ audioSrc }: AudioPlayerProps) => {
 
       {/* Controls */}
       <div className="flex items-center justify-center gap-8 mb-6">
-        <button
+        <button 
           onClick={() => skip(-10)}
           className="hover:opacity-70 transition-opacity"
           aria-label="Zpět 10 sekund"
         >
-          <RotateCcw size={32} strokeWidth={1.5} />
+         10s <RotateCcw size={32} strokeWidth={1.5} />
         </button>
         
         <button
@@ -117,7 +117,7 @@ const AudioPlayer = ({ audioSrc }: AudioPlayerProps) => {
           className="hover:opacity-70 transition-opacity"
           aria-label="Vpřed 10 sekund"
         >
-          <RotateCw size={32} strokeWidth={1.5} />
+        10s <RotateCw size={32} strokeWidth={1.5} />
         </button>
       </div>
 

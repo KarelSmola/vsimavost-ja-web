@@ -16,7 +16,14 @@ const Navigation = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      const offset = 20; // Offset to account for fixed navigation
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
       setIsMenuOpen(false);
     }
   };
@@ -53,9 +60,9 @@ const Navigation = () => {
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity border-b-2 border-foreground pb-1"
+              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
             >
-              KONTAKT →
+              [ KONTAKT ]
             </button>
           </div>
 
@@ -89,7 +96,7 @@ const Navigation = () => {
                 onClick={() => scrollToSection("contact")}
                 className="text-left py-2 font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
               >
-                KONTAKT →
+                [ KONTAKT ]
               </button>
             </div>
           </div>
