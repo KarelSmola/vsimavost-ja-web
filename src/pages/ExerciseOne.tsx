@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import AudioPlayer from "@/components/AudioPlayer";
-import audioFile from "@/assets/cviceni-jedna.mp3";
+import audioFile from "@/assets/cviceni-01.mp3";
 
 const ExerciseOne = () => {
   const navigate = useNavigate();
@@ -54,16 +54,16 @@ const ExerciseOne = () => {
         <div className="prose prose-invert max-w-none">
           <div className="font-inter text-base sm:text-lg font-light leading-relaxed space-y-6 opacity-90">
             <p>
-            Kdykoli prožíváme hněv, můžeme si být jistí, že jde o sekundární pocit, který se 
-            objevil jako reakce na jiný, primární pocit. Jako všímavý terapeuti bychom ale měli 
-            být schopni primární pocity jasně rozpoznávat, a tak si pojďme takové rozpoznávání 
-            vyzkoušet v následujícím cvičení.
+            Kdykoli prožíváme hněv, můžeme si být jistí, že jde o sekundární pocit, který se objevil 
+            jako reakce na jiný, primární pocit. Jako všímavý terapeuti bychom ale měli být schopni 
+            primární pocity jasně rozpoznávat, a tak si pojďme takové rozpoznávání vyzkoušet v následujícím 
+            cvičení.
             </p>
             
             <p>
-            Nejprve si vzpomeňte na nějakou situaci, kdy jste se cítili naštvaní. Zkuste si 
-            vybavit, co vás tenkrát naštvalo úplně nejvíc. Hledejte velmi podrobně spouštěč hněvu. 
-            Pokud šlo o interakci s jiným člověkem, naštvalo vás to, co vám řekl? Nebo způsob, jakým to řekl? 
+            Nejprve si vzpomeňte na nějakou situaci, kdy jste se cítili naštvaní. Zkuste si vybavit, 
+            co vás tenkrát naštvalo úplně nejvíc. Hledejte velmi podrobně spouštěč hněvu. Pokud šlo 
+            o interakci s jiným člověkem, naštvalo vás to, co vám řekl? Nebo způsob, jakým to řekl? 
             Naštvalo vás, co ten člověk udělal nebo naopak neudělal? Připomeňte si, jaká myšlenka 
             vám v tom okamžiku jako první proběhla hlavou.
             </p>
@@ -86,19 +86,20 @@ const ExerciseOne = () => {
             prožívá moje „vnitřní Dítě"? Zkoušejte si v duchu postupně říkat všechna výše uvedená 
             slova a pokaždé, když nějaké slovo v duchu vyslovíte, chvíli počkejte. A podívejte se, 
             zda se váš tělesný pocit nějak proměnil. Změnilo se v těle něco? Pokud ne, pomalu zkoušejte 
-            další slova. Jaké slovo by nejlépe vystihlo pocit, který právě teď cítíte? Co byste potřebovali, 
-            abyste se cítili lépe? Pozorujte chvíli svůj tělesný pocit s laskavostí a soucitem.
+            další slova. Jaké slovo by nejlépe vystihlo pocit, který právě teď cítíte? Co byste 
+            potřebovali, abyste se cítili lépe? Pozorujte chvíli svůj tělesný pocit s laskavostí 
+            a soucitem.
             </p>
             
             <p>
-            Už když si vnitřně připustíte možnost, že hněvu možná předchází nějaký jiný bolavý 
-            primární pocit, začnete si uvědomovat vlastní zranitelnost a rozvíjet tak soucitný 
-            postoj k sobě samým. Možná v průběhu cvičení najdete slovo, které váš pocit vystihuje, 
-            a pocítíte jistou úlevu. Možná jen zaznamenáte nějaký nepříjemný tělesný pocit, aniž 
-            byste mu plně porozuměli. Jestliže ale pocit i po deseti minutách stále přetrvává, 
-            jemně položte svou otevřenou dlaň na místo, kde ve vašem těle pocit cítíte. A třikrát 
-            za sebou v duchu vyslovte přání: „Kéž všechny moje bolestivé pocity pominou! Kéž je 
-            mi dobře!" Jak se cítíte teď?
+            Už když si vnitřně připustíte možnost, že hněvu možná předchází nějaký jiný 
+            bolavý primární pocit, začnete si uvědomovat vlastní zranitelnost a rozvíjet 
+            tak soucitný postoj k sobě samým. Možná v průběhu cvičení najdete slovo, které 
+            váš pocit vystihuje, a pocítíte jistou úlevu. Možná jen zaznamenáte nějaký 
+            nepříjemný tělesný pocit, aniž byste mu plně porozuměli. Jestliže ale pocit 
+            i po deseti minutách stále přetrvává, jemně položte svou otevřenou dlaň na místo, 
+            kde ve vašem těle pocit cítíte. A třikrát za sebou v duchu vyslovte přání: „Kéž 
+            všechny moje bolestivé pocity pominou! Kéž je mi dobře!" Jak se cítíte teď?
             </p>
           </div>
         </div>

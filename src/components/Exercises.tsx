@@ -1,25 +1,75 @@
+// import { title } from "process";
+import { Link } from "react-router-dom";
+
+const excercisesNeeds = {
+duration: "20-30 minut",
+tools: "papír a tužka",
+};
+
 const exercises = [
   {
     title: "CVIČENÍ 1",
-    description: "Jaký pocit předchází hněvu? Rozpoznávání primárních pocitů.",
-    duration: "15-20 minut",
-    link: "/cviceni/jedna",
+    description: "Jaký pocit předchází hněvu?",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/01",
   },
   {
     title: "CVIČENÍ 2",
-    description: "Postupné vnímání jednotlivých částí těla a uvolňování napětí.",
-    duration: "15-20 minut",
+    description: "Emoční most do minulosti.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/02",
   },
   {
     title: "CVIČENÍ 3",
-    description: "Vědomá chůze jako forma aktivní meditace.",
-    duration: "10-15 minut",
+    description: "Abstrakce a zobecnění.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/03",
   },
   {
     title: "CVIČENÍ 4",
-    description: "Kultivace soucitu a laskavosti k sobě i druhým.",
-    duration: "10-15 minut",
+    description: "Láskyplný dopis autentickému já.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/04",
   },
+  {
+    title: "CVIČENÍ 5",
+    description: "Znovuprožití láskyplné pozornosti a péče.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/05",
+  },
+  {
+    title: "CVIČENÍ 6",
+    description: "Shoďte ze sebe omnipotentní vinu.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/06",
+  },
+  {
+    title: "CVIČENÍ 7",
+    description: "Řekněte ano svému smutku.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/07",
+  },
+  {
+    title: "CVIČENÍ 8",
+    description: "Od méněcennosti k pokoře.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/08",
+  },
+  {
+    title: "CVIČENÍ 9",
+    description: "Sestoupení z piedestalu nadřazenosti.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/09",
+  }
 ];
 
 const Exercises = () => {
@@ -38,11 +88,11 @@ const Exercises = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {exercises.map((exercise, index) => {
-            const Component = exercise.link ? 'a' : 'div';
+            // const Component = exercise.link ? 'a' : 'div';
             return (
-              <Component
+              <Link
                 key={index}
-                href={exercise.link}
+                to={exercise.link!}
                 className="group p-8 bg-background border border-border hover:border-foreground transition-all duration-300 cursor-pointer block"
               >
                 <div className="space-y-4">
@@ -54,8 +104,11 @@ const Exercises = () => {
                       {exercise.duration}
                     </span>
                   </div>
-                  <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
+                  <h3 className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
                     {exercise.description}
+                  </h3>
+                  <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
+                    Doporučené pomůcky: {excercisesNeeds.tools}
                   </p>
                   <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-sm font-inter font-light border-b border-foreground pb-1">
@@ -63,7 +116,7 @@ const Exercises = () => {
                     </span>
                   </div>
                 </div>
-              </Component>
+              </Link>
             );
           })}
         </div>
