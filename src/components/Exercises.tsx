@@ -1,4 +1,5 @@
 // import { title } from "process";
+import { title } from "process";
 import { Link } from "react-router-dom";
 
 const excercisesNeeds = {
@@ -69,6 +70,83 @@ const exercises = [
     duration: excercisesNeeds.duration,
     tools: excercisesNeeds.tools,
     link: "/exercise/09",
+  },
+  {
+    title: "CVIČENÍ 10",
+    description: "Vaše jádrové přesvědčení na billboardu.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/10",
+  },
+  {
+    title: "CVIČENÍ 11",
+    description: "Kdo jsem?",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/11",
+  },
+  {
+    title: "CVIČENÍ 12",
+    description: "Překonání dramatického trojúhelníku.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/12",
+  },
+  {
+    title: "CVIČENÍ 13",
+    description: "Naučte se rozumět svým kontrolkám.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/13",
+  },
+  {
+    title: "CVIČENÍ 14",
+    description: "Hněv jako strážné zvíře.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/14",
+  },
+  {
+    title: "CVIČENÍ 15",
+    description: "Uvolněte své srdce ve vztahu k druhým.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/15",
+  },
+  {
+    title: "CVIČENÍ 16",
+    description: "Mám zdravě fungující autentické já?",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/16",
+  },
+  {
+    title: "CVIČENÍ 17",
+    description: "Transpersonální dezidentifikace.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/17",
+  },
+  {
+    title: "CVIČENÍ 18",
+    description: "Uložte si pocit úzasu a vděčnosti do své vnitřní databáze.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/18",
+  },
+  {
+    title: "CVIČENÍ 19",
+    description: "Co chce život ode mě?",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/19",
+  },
+  {
+    title: "CVIČENÍ 20",
+    description: "Integrita hodnot.",
+    duration: excercisesNeeds.duration,
+    tools: excercisesNeeds.tools,
+    link: "/exercise/20",
   }
 ];
 

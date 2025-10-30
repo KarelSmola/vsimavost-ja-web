@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import AudioPlayer from "@/components/AudioPlayer";
 import audioFile from "@/assets/cviceni-04.mp3";
 
-const ExerciseOne = () => {
+const ExerciseFour = () => {
   const navigate = useNavigate();
 
   const handleBackClick = () => {
@@ -99,4 +99,4 @@ const ExerciseOne = () => {
   );
 };
 
-export default ExerciseOne;
+export default ExerciseFour;
