@@ -1,58 +1,22 @@
-import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
 import AudioPlayer from "@/components/AudioPlayer";
 import audioFile from "@/assets/cviceni-14.mp3";
+import { ExerciseLayout } from "@/components/ExerciseLayout";
 
 const ExerciseFourteen = () => {
-  const navigate = useNavigate();
-
-  const handleBackClick = () => {
-    navigate("/");
-    // Wait for navigation to complete, then scroll to exercises section
-    setTimeout(() => {
-      const element = document.getElementById("exercises");
-      if (element) {
-        const offset = 20; // Offset to account for fixed navigation
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      }
-    }, 100);
-  };
-
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-6">
-          <button
-            onClick={handleBackClick}
-            className="inline-flex items-center gap-2 font-inter text-sm font-light hover:opacity-70 transition-opacity"
-          >
-            <ArrowLeft size={20} strokeWidth={1.5} />
-            Zpět na přehled cvičení
-          </button>
-        </div>
-      </header>
+    <ExerciseLayout>
+      <h1 className="font-bebas text-4xl sm:text-5xl lg:text-6xl leading-tight mb-8">
+      CVIČENÍ 14. HNĚV JAKO STRÁŽNÉ ZVÍŘE.
+      </h1>
 
-      {/* Content */}
-      <main className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="font-bebas text-4xl sm:text-5xl lg:text-6xl leading-tight mb-8">
-        CVIČENÍ 14. HNĚV JAKO STRÁŽNÉ ZVÍŘE.
-        </h1>
+      {/* Audio Player */}
+      <div className="mb-12">
+        <AudioPlayer audioSrc={audioFile} />
+      </div>
 
-        {/* Audio Player */}
-        <div className="mb-12">
-          <AudioPlayer audioSrc={audioFile} />
-        </div>
-
-        {/* Exercise Text */}
-        <div className="prose prose-invert max-w-none">
-          <div className="font-inter text-base sm:text-lg font-light leading-relaxed space-y-6 opacity-90">
+      {/* Exercise Text */}
+      <div className="prose prose-invert max-w-none">
+        <div className="font-inter text-base sm:text-lg font-light leading-relaxed space-y-6 opacity-90">
             <p>
               Hněv patří mezi základní emoce a je naprosto přirozené, že se v našem prožívání objevuje. 
               Je jakýmsi strážcem našich osobních hranic. A snaha hněv dlouhodobě ignorovat nebo potlačovat může 
@@ -97,10 +61,9 @@ const ExerciseFourteen = () => {
               situaci nemlčet, ale asertivně projevit, co cítíte. Až to vyzkoušíte, uvědomte si, o kolik lépe vám je. Neprojevený 
               hněv vám ubližuje. A ochranný hněv je ve skutečnosti esenciální součástí soucitu k sobě.
             </p>
-          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </ExerciseLayout>
   );
 };
 
