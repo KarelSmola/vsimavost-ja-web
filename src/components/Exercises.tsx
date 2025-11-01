@@ -159,8 +159,7 @@ const Exercises = () => {
             CVIČENÍ
           </h2>
           <p className="text-base sm:text-lg font-inter font-light opacity-80 max-w-2xl mx-auto lg:mx-0">
-            Prozkoumejte naši sbírku praktických cvičení navržených pro každodenní praxi
-            všímavosti.
+            Na každé cvičení doporučuji vyhradit si alespoň 30 minut a nachystat si papír s tužkou.
           </p>
         </div>
 
@@ -173,7 +172,7 @@ const Exercises = () => {
                 to={exercise.link!}
                 className="group p-8 bg-background border border-border hover:border-foreground transition-all duration-300 cursor-pointer block"
               >
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <div className="flex items-start justify-between">
                     <h3 className="font-bebas text-2xl sm:text-3xl leading-tight group-hover:translate-x-2 transition-transform duration-300">
                       {exercise.title}
@@ -182,12 +181,12 @@ const Exercises = () => {
                       {exercise.duration}
                     </span>
                   </div>
-                  <h3 className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
+                  <h3 className="font-inter sm:text-lg md:text-xl lg:text-2xl font-light opacity-70 leading-relaxed">
                     {exercise.description}
                   </h3>
-                  <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
+                  {/* <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
                     Doporučené pomůcky: {excercisesNeeds.tools}
-                  </p>
+                  </p> */}
                   <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-sm font-inter font-light border-b border-foreground pb-1">
                       VÍCE INFO →

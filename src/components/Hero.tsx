@@ -17,15 +17,19 @@ const Hero = () => {
             <br />A SEBEPOZNÁNÍ
           </h1>
 
-          {/* Accent box integrated with typography */}
-          <div className="relative py-8 sm:py-12">
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64 bg-muted rounded-sm -z-10"></div>
+          {/* Obrázek pod nadpisem */}
+          <div className="flex justify-center mt-8 sm:mt-12 opacity-60">
+            <img
+              src="/vsimavost-a-ja.png"
+              alt="Všímavost a sebepoznání"
+              className="max-w-[80%] md:max-w-[60%] lg:max-w-[50%] h-auto object-contain hidden md:block"
+              style={{
+                maskImage: 'radial-gradient(ellipse 50% 60% at center, black 40%, transparent 85%)',
+                WebkitMaskImage: 'radial-gradient(ellipse 50% 60% at center, black 40%, transparent 85%)',
+              }}
+            />
           </div>
 
-          {/* Subtitle */}
-          <p className="text-xs sm:text-sm font-inter font-light tracking-[0.2em] opacity-60 max-w-md mx-auto">
-            OBJEVTE SÍLU PŘÍTOMNÉHO OKAMŽIKU
-          </p>
         </div>
       </div>
     </section>

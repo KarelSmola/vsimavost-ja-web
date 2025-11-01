@@ -41,7 +41,7 @@ const Navigation = () => {
             onClick={() => scrollToSection("hero")}
             className="font-bebas text-xl sm:text-2xl tracking-wide hover:opacity-70 transition-opacity"
           >
-            VŠÍMAVOST A JÁ
+            VŠÍMAVOST A SEBEPOZNÁNÍ
           </button>
 
           {/* Desktop Navigation */}
@@ -57,6 +57,12 @@ const Navigation = () => {
               className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
             >
               [ CVIČENÍ ]
+            </button>
+            <button
+              onClick={() => scrollToSection("build")}
+              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
+            >
+              [ TVOŘENÍ PROJEKTU ]
             </button>
             <button
               onClick={() => scrollToSection("contact")}

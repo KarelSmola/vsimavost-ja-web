@@ -1,4 +1,18 @@
 const About = () => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 20; // Offset to account for fixed navigation
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <section id="about" className="min-h-screen flex items-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
@@ -13,24 +27,43 @@ const About = () => {
 
           {/* Right column - Content */}
           <div className="space-y-6 font-inter">
+            <h1 className="font-bebas text-xl sm:text-3xl">
+            {/* font-bebas text-xl sm:text-2xl tracking-wide hover:opacity-70 transition-opacity */}
+              Proč tato stránka vznikla
+            </h1>
+
             <p className="text-base sm:text-lg font-light leading-relaxed opacity-80">
-              Všímavost a Já je projekt zaměřený na rozvoj osobní všímavosti a hlubšího
-              sebepoznání. Prostřednictvím praktických cvičení a technik vám pomůžeme objevit
-              cestu k vnitřnímu klidu a harmonii.
+              Kniha Všímavost a Já od PhDr. Jana Bendy, Ph.D. nabízí 20 praktických cvičení, která pomáhají rozvíjet všímavost a vědomý přístup k životu. Při čtení mě napadlo, že tato cenná cvičení by měla být snadno dostupná kdykoli a kdekoli – ne jen v knize na polici.
             </p>
+
             <p className="text-base sm:text-lg font-light leading-relaxed opacity-80">
-              Naše metody jsou založeny na vědecky ověřených přístupech mindfulness a meditace,
-              přizpůsobené modernímu způsobu života.
+              Proto vznikla tato webová stránka. Jejím cílem je mít všechna cvičení stále po ruce – v textové i audio podobě. Stačí telefon, tablet nebo notebook s připojením k internetu a můžete se k praktikování všímavosti vrátit, ať jste kdekoli.
             </p>
+
+            <p className="text-base sm:text-lg font-light leading-relaxed opacity-80">
+              Tato stránka je osobním projektem pro pravidelnou praxi všímavosti – a možná poslouží i vám.
+            </p>
+
+            <p className="text-base sm:text-lg font-light leading-relaxed opacity-80">
+              Pokud Vás zajímá jak projekt vznikal po technické stránce. Jaké (nejen) AI nástroje byly použity, podívejte se na{" "}
+              <button
+                onClick={() => scrollToSection("build")}
+                className="underline hover:opacity-70 transition-opacity"
+              >
+                JAK PROJEKT VZNIKAL
+              </button>
+              .
+            </p>
+
             <div className="pt-8">
               <div className="grid grid-cols-2 gap-8 sm:gap-12">
                 <div>
-                  <p className="font-bebas text-4xl sm:text-5xl">100+</p>
+                  <p className="font-bebas text-4xl sm:text-5xl">20</p>
                   <p className="text-sm font-light opacity-60 mt-2">CVIČENÍ</p>
                 </div>
                 <div>
-                  <p className="font-bebas text-4xl sm:text-5xl">5MIN</p>
-                  <p className="text-sm font-light opacity-60 mt-2">DENNĚ</p>
+                  <p className="font-bebas text-4xl sm:text-5xl">20 - 30 minut</p>
+                  <p className="text-sm font-light opacity-60 mt-2">NA KAŽDÉ CVIČENÍ</p>
                 </div>
               </div>
             </div>
