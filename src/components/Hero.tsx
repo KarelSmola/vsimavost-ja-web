@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Obrázek pod nadpisem */}
           <div className="flex justify-center mt-8 sm:mt-12 opacity-60">
             <img
-              src="/vsimavost-a-ja.png"
+              src={`${import.meta.env.BASE_URL}vsimavost-a-ja.png`}
               alt="Všímavost a sebepoznání"
               className="max-w-[80%] md:max-w-[60%] lg:max-w-[50%] h-auto object-contain hidden md:block"
               style={{
