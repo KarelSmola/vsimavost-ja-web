@@ -45,28 +45,28 @@ const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6 lg:gap-8">
+          <div className="hidden md:flex items-center gap-4 md:gap-5 lg:gap-8">
             <button
               onClick={() => scrollToSection("about")}
-              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
+              className="nav-link text-xs md:text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity whitespace-nowrap"
             >
               [ O PROJEKTU ]
             </button>
             <button
               onClick={() => scrollToSection("exercises")}
-              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
+              className="nav-link text-xs md:text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity whitespace-nowrap"
             >
               [ CVIČENÍ ]
             </button>
             <button
               onClick={() => scrollToSection("build")}
-              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
+              className="nav-link text-xs md:text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity whitespace-nowrap"
             >
               [ TVOŘENÍ PROJEKTU ]
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="nav-link text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
+              className="nav-link text-xs md:text-sm lg:text-base font-inter font-light tracking-wider hover:opacity-70 transition-opacity whitespace-nowrap"
             >
               [ KONTAKT ]
             </button>
@@ -97,6 +97,12 @@ const Navigation = () => {
                 className="text-left py-2 font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
               >
                 [ CVIČENÍ ]
+              </button>
+              <button
+                onClick={() => scrollToSection("build")}
+                className="text-left py-2 font-inter font-light tracking-wider hover:opacity-70 transition-opacity"
+              >
+                [ TVOŘENÍ PROJEKTU ]
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
