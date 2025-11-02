@@ -19,7 +19,13 @@ export default defineConfig(({ mode }) => {
       {
         name: 'html-transform',
         transformIndexHtml(html: string) {
-          return html.replace('/favicon.ico', `${base}favicon.ico`);
+          // Replace favicon paths with base path (only if base is not root)
+          if (base !== '/') {
+            // Replace all favicon references
+            html = html.replace(/href="\/favicon\.ico"/g, `href="${base}favicon.ico"`);
+            html = html.replace(/href='\/favicon\.ico'/g, `href='${base}favicon.ico'`);
+          }
+          return html;
         },
       },
     ].filter(Boolean),
