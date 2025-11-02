@@ -159,7 +159,7 @@ const Exercises = () => {
             CVIČENÍ
           </h2>
           <p className="text-base sm:text-lg font-inter font-light opacity-80 max-w-2xl mx-auto lg:mx-0">
-            Na každé cvičení doporučuji vyhradit si alespoň 30 minut a nachystat si papír s tužkou.
+            Dopřejte si na každé cvičení alespoň 30 minut klidu a připravte si papír a tužku.
           </p>
         </div>
 
@@ -177,16 +177,12 @@ const Exercises = () => {
                     <h3 className="font-bebas text-2xl sm:text-3xl leading-tight group-hover:translate-x-2 transition-transform duration-300">
                       {exercise.title}
                     </h3>
-                    <span className="text-xs font-inter font-light opacity-60 whitespace-nowrap ml-4">
-                      {exercise.duration}
-                    </span>
+
                   </div>
                   <h3 className="font-inter sm:text-lg md:text-xl lg:text-2xl font-light opacity-70 leading-relaxed">
                     {exercise.description}
                   </h3>
-                  {/* <p className="font-inter text-sm sm:text-base font-light opacity-70 leading-relaxed">
-                    Doporučené pomůcky: {excercisesNeeds.tools}
-                  </p> */}
+                
                   <div className="pt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <span className="text-sm font-inter font-light border-b border-foreground pb-1">
                       VÍCE INFO →

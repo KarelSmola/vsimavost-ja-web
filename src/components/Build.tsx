@@ -15,7 +15,7 @@ const Contact = () => {
           <div className="space-y-8 font-inter">
             <div>
               
-              <p className="text-base sm:text-lg font-light leading-relaxed opacity-80 mb-6">
+              <p className="text-base sm:text-lg font-inter font-light opacity-80 max-w-2xl mx-auto lg:mx-0 mb-8">
                 Tento web je praktickou ukázkou toho, jak člověk bez hlubokých IT znalostí může 
                 vytvořit a nasadit funkční web. Stačí jen chtít se učit a zkoušet nové věci.
               </p>
@@ -43,7 +43,7 @@ const Contact = () => {
                 Podrobně
               </h2>
 
-              <p className="text-base sm:text-lg font-light leading-relaxed opacity-80 mt-1">
+              <p className="text-base sm:text-lg font-inter font-light opacity-80 max-w-2xl mx-auto lg:mx-0">
                 Nejdříve jsem vyfotil jednotlivé stránky knihy a v Claudu je začal převádět na text. 
                 Po vyčerpání bezplatného limitu jsem pokračoval v ChatGPT, který běžně používám. <br />
                 Texty jsem následně prošel, opravil nepřesnosti a zjistil, že příště by bylo jednodušší 
